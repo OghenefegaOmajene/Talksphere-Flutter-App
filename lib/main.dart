@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
         //
         // This works for code too, not just values: Most code changes can be
         // tested with just a hot reload.
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.pink),
       ),
       home: const MyHomePage(title: 'TalkSphere'),
     );
@@ -85,19 +85,21 @@ class _MyHomePageState extends State<MyHomePage> {
         // Here we take the value from the MyHomePage object that was created by
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
+        leading: Icon(
+            Icons.message_rounded,
+            color: Colors.pink,
+        ),
       ),
-      body: Stack(
+      body: Wrap(
         children: [
-          Image.asset(
-            'assets/images/eye.jpeg',
-            fit: BoxFit.cover,
-          ),
-          Text('Talksphere', style: TextStyle(
-            color: Colors.deepOrange
-          ),)
+          Text('efweifwbiufwhdvydbvowivgwydhvbdjivbwdgvbwvhwbdvbhwdviw'),
+          Text('ArtifactX'),
+          Text('ArtifactX'),
+          Text('ArtifactX'),
+          Text('ArtifactX'),
+          Text('ArtifactX'),
         ],
-          // 'https://img.freepik.com/free-photo/anime-eyes-illustration_23-2151660535.jpg',
-
+          // 'https://img.freepik.com/free-photo/anime-eyes-illustration_23-2151660535.jpg'
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
