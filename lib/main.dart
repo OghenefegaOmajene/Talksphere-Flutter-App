@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
         // tested with just a hot reload.
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'TalkSphere'),
     );
   }
 }
@@ -86,10 +86,18 @@ class _MyHomePageState extends State<MyHomePage> {
         // the App.build method, and use it to set our appbar title.
         title: Text(widget.title),
       ),
-      body: Image.network(
-          'https://img.freepik.com/free-photo/anime-eyes-illustration_23-2151660535.jpg',
-           height: double.infinity,
-          fit: BoxFit.cover,
+      body: Stack(
+        children: [
+          Image.asset(
+            'assets/images/eye.jpeg',
+            fit: BoxFit.cover,
+          ),
+          Text('Talksphere', style: TextStyle(
+            color: Colors.deepOrange
+          ),)
+        ],
+          // 'https://img.freepik.com/free-photo/anime-eyes-illustration_23-2151660535.jpg',
+
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
